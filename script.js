@@ -18,4 +18,21 @@ let getHumanChoise = () => {
 let humanScore = 0;
 let computerScore = 0;
 
+let playRound = (humanChoise, computerChoise) => {
+  if (humanChoise == computerChoise) {
+    return "It's a tie ! no points to anybody.";
+  } else if (humanChoise == "rock" && computerChoise == "scissors") {
+    humanScore++;
+    return "Human Won ! | rock beats scissors ";
+  } else if (humanChoise == "paper" && computerChoise == "rock") {
+    humanScore++;
+    return "Human Won ! | paper beats rock ";
+  } else if (humanChoise == "scissors" && computerChoise == "paper") {
+    humanScore++;
+    return "Human Won ! | scissors beats paper ";
+  } else {
+    computerScore++;
+    return "computer won this round !";
+  }
+};
 
