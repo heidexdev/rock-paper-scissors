@@ -8,3 +8,10 @@ let getComputerChoise = function () {
     return "scissors";
   }
 };
+
+let getHumanChoise = () => {
+  let input = prompt("rock/paper/scissors ?", "");
+  input = input.toLowerCase();
+  return input;
+};
+
