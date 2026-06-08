@@ -53,6 +53,6 @@ let playGame = () => {
     return console.log("Game Over: It's an overall tie!");
   }
 };
-let gameResult = playGame();
-console.log(gameResult);
+
+playGame();
 console.log("humanScore: " + humanScore + ", computerScore: " + computerScore);
