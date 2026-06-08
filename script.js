@@ -1,5 +1,5 @@
 let getComputerChoise = function () {
-  let randomNumber = Math.random() * 10 + 1;
+  let randomNumber = Math.random() * 10 ;
   if (randomNumber >= 6.66) {
     return "rock";
   } else if (randomNumber >= 3.33) {
