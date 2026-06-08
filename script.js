@@ -1,5 +1,5 @@
 let getComputerChoise = function () {
-  let randomNumber = Math.random() * 10 ;
+  let randomNumber = Math.random() * 10;
   if (randomNumber >= 6.66) {
     return "rock";
   } else if (randomNumber >= 3.33) {
@@ -24,33 +24,40 @@ let playGame = () => {
       return console.log("It's a tie ! no points to anybody.");
     } else if (humanChoise == "rock" && computerChoise == "scissors") {
       humanScore++;
-      return console.log("Human Won !  rock beats scissors ");
+      console.log("Human Won !  rock beats scissors ");
+      return;
     } else if (humanChoise == "paper" && computerChoise == "rock") {
       humanScore++;
-      return console.log("Human Won !  paper beats rock ");
+      console.log("Human Won !  paper beats rock ");
+      return;
     } else if (humanChoise == "scissors" && computerChoise == "paper") {
       humanScore++;
-      return console.log("Human Won !  scissors beats paper ");
+      console.log("Human Won !  scissors beats paper ");
+      return;
     } else {
       computerScore++;
-      return console.log("computer won this round !");
+      console.log("computer won this round !");
     }
   };
 
   for (let i = 0; i < 5; i++) {
     playRound(getHumanChoise(), getComputerChoise());
     if (humanScore == 3) {
-      return console.log("Congrats ! Human won the Game ");
+      console.log("Congrats ! Human won the Game ");
+      return;
     } else if (computerScore == 3) {
-      return console.log("You lost to the computer !");
+      console.log("You lost to the computer !");
+      return;
     }
   }
   if (humanScore > computerScore) {
     return console.log("Game Over: Human wins on points!");
   } else if (computerScore > humanScore) {
-    return console.log("Game Over: Computer wins on points!");
+    console.log("Game Over: Computer wins on points!");
+    return;
   } else {
-    return console.log("Game Over: It's an overall tie!");
+    console.log("Game Over: It's an overall tie!");
+    return;
   }
 };
 
